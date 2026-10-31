@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3Dex - Custom Orders & Testing Login</title>
+  <title>3Dex - Custom CAD Orders</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,28 +16,7 @@
 
   <main>
     
-    <!-- 1. TESTING SIGN-IN BOX SECTION -->
-    <section class="glass-card form-container">
-      <h2 class="section-title">Testing Sign-In Box</h2>
-      <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.85;">Simulate user login and authentication credentials.</p>
-      
-      <form onsubmit="handleTestLogin(event)" class="custom-form">
-        <div class="form-group">
-          <label for="test-email">Test Username / Email</label>
-          <input type="email" id="test-email" name="test_email" placeholder="tester@example.com" autocomplete="username" required>
-        </div>
-
-        <div class="form-group">
-          <label for="test-password">Test Password</label>
-          <input type="password" id="test-password" name="test_password" placeholder="Enter test password" autocomplete="current-password" required>
-        </div>
-
-        <button type="submit" class="btn-long btn-submit" style="background: rgba(0, 212, 255, 0.3); border-color: #00d4ff;">Simulate Sign In</button>
-      </form>
-      <div id="login-feedback" style="margin-top: 15px; font-size: 0.95rem; font-weight: bold; color: #00ff88;"></div>
-    </section>
-
-    <!-- 2. WEB3FORMS ORDER & CONTACT SECTION -->
+    <!-- WEB3FORMS ORDER & CONTACT SECTION (Only Box Kept) -->
     <section class="glass-card form-container">
       <h2 class="section-title">Request a Custom Design</h2>
       <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.85;">Submit project details directly via Web3Forms.</p>
@@ -65,15 +44,16 @@
           <textarea id="message" name="message" rows="5" placeholder="Describe dimensions, file types (STL, STEP), or business requirements..." required></textarea>
         </div>
 
-        <!-- Action Links for Email Notifications -->
-        <input type="hidden" name="1. Action - Accept Order" value="mailto:rayyancheema786@gmail.com?subject=Order%20Accepted&body=The%20CAD%20order%20has%20been%20ACCEPTED.">
-        <input type="hidden" name="2. Action - Reject Order" value="mailto:rayyancheema786@gmail.com?subject=Order%20Rejected&body=The%20CAD%20order%20has%20been%20REJECTED.">
+        <!-- Automated Green Accept & Red Reject Action Buttons for Email Notifications -->
+        <input type="hidden" name="🟢 1. Click to ACCEPT Order" value="mailto:{{email}}?subject=Your%203Dex%20Order%20has%20been%20ACCEPTED!&body=Hi%20{{name}},%0D%0A%0D%0AWe%20have%20reviewed%20your%20CAD%20project%20request%20and%20are%20thrilled%20to%20accept!%20We%20will%20begin%20processing%20your%20transaction%20shortly.%0D%0A%0D%0ABest%20regards,%0D%0A3Dex%20Team">
+        
+        <input type="hidden" name="🔴 2. Click to REJECT Order" value="mailto:{{email}}?subject=Update%20regarding%20your%203Dex%20Order&body=Hi%20{{name}},%0D%0A%0D%0AThank%20you%20for%20submitting%20your%20CAD%20project%20request.%20Unfortunately,%20we%20are%20unable%20to%20accept%20this%20order%20at%20this%20time.%0D%0A%0D%0ABest%20regards,%0D%0A3Dex%20Team">
 
         <button type="submit" class="btn-long btn-submit">Submit Order Request</button>
       </form>
     </section>
 
-    <!-- 3. FUTURISTIC RETURN TO MAIN HOMEPAGE LINK -->
+    <!-- FUTURISTIC RETURN TO MAIN HOMEPAGE LINK -->
     <div style="margin: 35px 0 20px 0; text-align: center;">
       <a href="https://rayyansc.github.io/3Dex1/" class="btn-futuristic-home">
         <span class="glow-icon">⚡</span> Return to 3Dex Home Hub
@@ -81,15 +61,6 @@
     </div>
 
   </main>
-
-  <script>
-    function handleTestLogin(event) {
-      event.preventDefault();
-      const email = document.getElementById('test-email').value;
-      const feedback = document.getElementById('login-feedback');
-      feedback.textContent = `✅ Test login successful for: ${email}`;
-    }
-  </script>
 
 </body>
 </html>
