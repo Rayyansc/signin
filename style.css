@@ -1,0 +1,18 @@
+/* Add password type to your existing form inputs selector */
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form input[type="password"],
+.custom-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: inherit;
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.3s ease;
+}
