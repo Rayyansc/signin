@@ -16,7 +16,7 @@
 
   <main>
     
-    <!-- WEB3FORMS ORDER & CONTACT SECTION (Only Box Kept) -->
+    <!-- WEB3FORMS ORDER & CONTACT SECTION -->
     <section class="glass-card form-container">
       <h2 class="section-title">Request a Custom Design</h2>
       <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.85;">Submit project details directly via Web3Forms.</p>
@@ -44,10 +44,9 @@
           <textarea id="message" name="message" rows="5" placeholder="Describe dimensions, file types (STL, STEP), or business requirements..." required></textarea>
         </div>
 
-        <!-- Automated Green Accept & Red Reject Action Buttons for Email Notifications -->
-        <input type="hidden" name="🟢 1. Click to ACCEPT Order" value="mailto:{{email}}?subject=Your%203Dex%20Order%20has%20been%20ACCEPTED!&body=Hi%20{{name}},%0D%0A%0D%0AWe%20have%20reviewed%20your%20CAD%20project%20request%20and%20are%20thrilled%20to%20accept!%20We%20will%20begin%20processing%20your%20transaction%20shortly.%0D%0A%0D%0ABest%20regards,%0D%0A3Dex%20Team">
-        
-        <input type="hidden" name="🔴 2. Click to REJECT Order" value="mailto:{{email}}?subject=Update%20regarding%20your%203Dex%20Order&body=Hi%20{{name}},%0D%0A%0D%0AThank%20you%20for%20submitting%20your%20CAD%20project%20request.%20Unfortunately,%20we%20are%20unable%20to%20accept%20this%20order%20at%20this%20time.%0D%0A%0D%0ABest%20regards,%0D%0A3Dex%20Team">
+        <!-- Clickable Email Action Links -->
+        <input type="hidden" name="Click to ACCEPT (Green)" value="mailto:{{email}}?subject=Your%203Dex%20Order%20Accepted&body=Hi%20{{name}},%20your%20CAD%20order%20has%20been%20accepted!">
+        <input type="hidden" name="Click to REJECT (Red)" value="mailto:{{email}}?subject=Your%203Dex%20Order%20Update&body=Hi%20{{name}},%20unfortunately%20we%20cannot%20accept%20your%20order%20at%20this%20time.">
 
         <button type="submit" class="btn-long btn-submit">Submit Order Request</button>
       </form>
