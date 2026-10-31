@@ -37,17 +37,18 @@
       <div id="login-feedback" style="margin-top: 15px; font-size: 0.95rem; font-weight: bold; color: #00ff88;"></div>
     </section>
 
-    <!-- 2. WEB3FORMS ORDER & CONTACT SECTION -->
+    <!-- 2. WEB3FORMS ORDER & CONTACT SECTION WITH ACCEPT/REJECT WORKFLOW -->
     <section class="glass-card form-container">
       <h2 class="section-title">Request a Custom Design</h2>
       <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.85;">Submit project details directly via Web3Forms.</p>
 
       <form action="https://api.web3forms.com/submit" method="POST" class="custom-form">
         
-        <!-- Web3Forms Access Key -->
+        <!-- Web3Forms Access Key & Settings -->
         <input type="hidden" name="access_key" value="8b77c291-bdef-4300-9c3d-1973dd3b6e83">
-        <input type="hidden" name="subject" value="New 3Dex Custom CAD Order Request">
+        <input type="hidden" name="subject" value="⚡ New 3Dex Custom CAD Order Request">
 
+        <!-- Form Input Fields -->
         <div class="form-group">
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required>
@@ -62,6 +63,10 @@
           <label for="message">Business & Project Description</label>
           <textarea id="message" name="message" rows="5" placeholder="Describe dimensions, file types (STL, STEP), or business requirements..." required></textarea>
         </div>
+
+        <!-- Optional: Custom Action Link Hints for Notification Emails -->
+        <input type="hidden" name="accept_action" value="Reply directly to ACCEPT this custom CAD order.">
+        <input type="hidden" name="reject_action" value="Reply directly to REJECT/DECLINE this CAD request.">
 
         <button type="submit" class="btn-long btn-submit">Submit Order Request</button>
       </form>
@@ -81,9 +86,4 @@
       event.preventDefault();
       const email = document.getElementById('test-email').value;
       const feedback = document.getElementById('login-feedback');
-      feedback.textContent = `✅ Test login successful for: ${email}`;
-    }
-  </script>
-
-</body>
-</html>
+      feedback.textContent = `✅ Test login
