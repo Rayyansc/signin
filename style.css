@@ -1,4 +1,4 @@
-/* Add password type to your existing form inputs selector */
+/* Ensure inputs and passwords are fully selectable and interactive */
 .custom-form input[type="text"],
 .custom-form input[type="email"],
 .custom-form input[type="password"],
@@ -12,7 +12,49 @@
   font-size: 1rem;
   font-family: inherit;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   box-sizing: border-box;
   outline: none;
   transition: all 0.3s ease;
+  pointer-events: auto; /* Fixes any blocking click/typing bugs */
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Futuristic Back-to-Home Button Styling */
+.btn-futuristic-home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 30px;
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #ffffff;
+  text-decoration: none;
+  background: rgba(0, 212, 255, 0.2);
+  border: 1px solid #00d4ff;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn-futuristic-home:hover {
+  background: rgba(0, 212, 255, 0.4);
+  border-color: #ffffff;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.8), inset 0 0 10px rgba(0, 212, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+.glow-icon {
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 8px #00d4ff);
 }
