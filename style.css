@@ -84,9 +84,7 @@ h1 {
   color: #ffffff;
 }
 
-/* INPUT & PASSWORD INTERACTION FIX:
-   Ensures text inputs, password fields, and textareas stay 100% selectable,
-   clickable, and editable across mobile and desktop browsers. */
+/* INPUT & PASSWORD INTERACTION FIX */
 .custom-form input[type="text"],
 .custom-form input[type="email"],
 .custom-form input[type="password"],
@@ -95,7 +93,7 @@ h1 {
   padding: 12px 16px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(0, 0, 0, 0.35); /* Darker backdrop so typed text pops */
+  background: rgba(0, 0, 0, 0.35);
   color: #ffffff !important;
   font-size: 1rem;
   font-family: inherit;
@@ -103,7 +101,6 @@ h1 {
   outline: none;
   transition: all 0.3s ease;
   
-  /* Critical input interaction fixes */
   pointer-events: auto !important;
   user-select: text !important;
   -webkit-user-select: text !important;

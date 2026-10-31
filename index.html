@@ -65,6 +65,10 @@
           <textarea id="message" name="message" rows="5" placeholder="Describe dimensions, file types (STL, STEP), or business requirements..." required></textarea>
         </div>
 
+        <!-- Action Links for Email Notifications -->
+        <input type="hidden" name="1. Action - Accept Order" value="mailto:rayyancheema786@gmail.com?subject=Order%20Accepted&body=The%20CAD%20order%20has%20been%20ACCEPTED.">
+        <input type="hidden" name="2. Action - Reject Order" value="mailto:rayyancheema786@gmail.com?subject=Order%20Rejected&body=The%20CAD%20order%20has%20been%20REJECTED.">
+
         <button type="submit" class="btn-long btn-submit">Submit Order Request</button>
       </form>
     </section>
